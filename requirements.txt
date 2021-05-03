@@ -1,3 +1,4 @@
 pytorchvideo
 gradio
 torch
+torchvision
