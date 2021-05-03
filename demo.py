@@ -17,16 +17,18 @@ from pytorchvideo.transforms import (
 
 import gradio as gr
 
+
+# Set to GPU or CPU
+device = "cpu"
+model = model.to(device)
+
 #Video
 torch.hub.download_url_to_file('https://dl.fbaipublicfiles.com/pytorchvideo/projects/archery.mp4', 'archery.mp4')
 
 model_name = 'x3d_s'
 model = torch.hub.load('facebookresearch/pytorchvideo', model_name, pretrained=True)
 
-# Set to GPU or CPU
-device = "cpu"
-model = model.eval()
-model = model.to(device)
+
 
 json_url = "https://dl.fbaipublicfiles.com/pyslowfast/dataset/class_names/kinetics_classnames.json"
 json_filename = "kinetics_classnames.json"
