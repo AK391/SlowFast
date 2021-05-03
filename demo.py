@@ -24,7 +24,7 @@ model_name = 'x3d_s'
 model = torch.hub.load('facebookresearch/pytorchvideo', model_name, pretrained=True)
 
 # Set to GPU or CPU
-device = "cuda"
+device = "cpu"
 model = model.eval()
 model = model.to(device)
 
