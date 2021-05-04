@@ -23,7 +23,7 @@ import gradio as gr
 #Video
 torch.hub.download_url_to_file('https://dl.fbaipublicfiles.com/pytorchvideo/projects/archery.mp4', 'archery.mp4')
 
-model_name = 'x3d_s'
+model_name = 'efficient_x3d_xs'
 model = torch.hub.load('facebookresearch/pytorchvideo', model_name, pretrained=True)
 
 # Set to GPU or CPU
